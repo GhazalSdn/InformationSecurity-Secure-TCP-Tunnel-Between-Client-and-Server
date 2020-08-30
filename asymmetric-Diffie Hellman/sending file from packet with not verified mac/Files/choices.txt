@@ -1,0 +1,48 @@
+Using linux system calls:
+
+-Multiple calculations in 4 processes using fork() and using getpid()
+
+-Pass the value from child process to parent process and concate two strings between child process and parent processusing fork() and pipe() 
+
+-Chat application between two processes using signals and shared memory
+
+-chat application using select()
+
+
+
+
+SYS CALLS:
+-SYS_invoked_syscalls(int pid) --> printing all syscalls which this process called (identified by pid)
+
+-SYS_sort_syscalls(int pid) --> sort above syscalls by their numbers
+
+-SYS_get_count(int pid, int sysnum) --> get number of times the process calls the unique syscall
+
+-SYS_log_syscalls() --> list all syscalls called by all processes
+
+-int getreadcount(void)
+Your system call returns the value of a counter (perhaps called readcount or something like that) which is incremented every time any process calls the read() system call.
+
+-getnice() and setnice()
+
+
+ -uint getuid(void)
+ -unit getpid(void)
+ -uint getppid(void)
+ -int setuid(uint)
+ -int setgid(uint)
+
+- int getyieldcnt(pid p)
+	1. Return process yield count
+	2. Process should add yield count at yield
+-int yield()
+	input:
+	Non
+	output:
+	0 -->­​ if successful
+­	1 ­--> ​otherwise
+
+-int getprocs(int max, struct uproc table[]);
+	 which displays the list of processes currently in the system
+
+
